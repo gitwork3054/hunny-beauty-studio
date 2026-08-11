@@ -190,7 +190,18 @@ main > .section:nth-of-type(3n) {
   }
   .nav-links.open { transform: translateX(0); }
   .nav-toggle { display: block; }
-  .nav-cta .btn span { display: none; }
+  .nav-cta .btn {
+  min-height: 44px;
+  padding: 10px 16px;
+  font-size: 0.72rem;
+  line-height: 1;
+  justify-content: center;
+  touch-action: manipulation;
+}
+
+.nav-cta .btn span {
+  display: inline;
+}
 }
 
 /* =================== HERO =================== */
@@ -692,4 +703,9 @@ main > .section:nth-of-type(3n) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .motion-ready .reveal { opacity: 1; transform: none; }
   .hero-visual .frame, .hero-visual .frame img { transform: none !important; }
+}
+
+.nav-cta .btn {
+  padding-inline: 12px;
+  font-size: 0.68rem;
 }
