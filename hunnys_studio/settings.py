@@ -20,7 +20,15 @@ SECRET_KEY = os.environ.get(
     "django-insecure-CHANGE-THIS-BEFORE-DEPLOYING-xyz123"
 )
 DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = [
+    "hunny-beauty-studio.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://hunny-beauty-studio.onrender.com",
+]
 
 # -------------------------------------------------------------------
 # Applications
